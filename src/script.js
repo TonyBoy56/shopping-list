@@ -9,12 +9,15 @@ function addItem(e) {
 
   const newItem = itemInput.value;
   
-  // Validate Input
+//   Validate Input
   if (newItem === '') {
     alert('Please add an item');
     return;
   }
+
+//   Create List Item
+
 }
 
-// Event Listeners, to be added to an initializer function
+//  Event Listeners, to be added to an initializer function
 itemForm.addEventListener("submit", addItem);
