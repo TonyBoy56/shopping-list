@@ -27,6 +27,10 @@ function addItem(e) {
   itemInput.value = '';
 }
 
+function deleteItemA() {
+  e.preventDefault();
+}
+
 function createButton(classes) {
     const button = document.createElement('button');
     button.className = classes;
@@ -43,3 +47,4 @@ function createIcon(classes) {
 
 //  Event Listeners, to be added to an initializer function
 itemForm.addEventListener("submit", addItem);
+itemlist.addEventListener("click", deleteItem);
