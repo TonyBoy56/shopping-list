@@ -3,6 +3,7 @@
 const itemForm = document.getElementById('item-form');
 const itemInput = document.getElementById('item-input');
 const itemList = document.getElementById('item-list');
+const itemClear = document.getElementById('clear');
 
 function addItem(e) {
   e.preventDefault();
@@ -49,5 +50,6 @@ function deleteItem(e) {
 }
 
 //  Event Listeners, to be added to an initializer function
-itemForm.addEventListener("submit", addItem);
-itemList.addEventListener("click", deleteItem);
+itemForm.addEventListener('submit', addItem);
+itemList.addEventListener('click', deleteItem);
+itemClear.addEventListener('clear', clearList);
