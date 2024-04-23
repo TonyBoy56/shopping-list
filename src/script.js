@@ -43,7 +43,9 @@ function createIcon(classes) {
 }
 
 function deleteItem(e) {
-  console.log(e.target)
+  if (e.target.parentElement.classList.contains('delete-item')) {
+    e.target.documentElement.parentElement.remove();  
+  };
 }
 
 //  Event Listeners, to be added to an initializer function
