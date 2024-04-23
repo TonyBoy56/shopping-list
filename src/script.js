@@ -19,7 +19,7 @@ function addItem(e) {
   const li =  document.createElement('li');
   li.appendChild(document.createTextNode(newItem));
 
-  const button = createButton('remove-item btn-link text-red');
+  const button = createButton('delete-item btn-link text-red');
   li.appendChild(button);
 
   itemList.appendChild(li);
@@ -48,4 +48,4 @@ function deleteItem(e) {
 
 //  Event Listeners, to be added to an initializer function
 itemForm.addEventListener("submit", addItem);
-itemlist.addEventListener("click", deleteItem);
+itemList.addEventListener("click", deleteItem);
