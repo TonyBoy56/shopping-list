@@ -45,12 +45,15 @@ function createIcon(classes) {
 
 function deleteItem(e) {
   if (e.target.parentElement.classList.contains('delete-item')) {
-    e.target.documentElement.parentElement.remove();  
+    e.target.parentElement.parentElement.remove();  
   };
 }
 
+function clearList() {
+  console.log('works');
+;}
 
 //  Event Listeners, to be added to an initializer function
 itemForm.addEventListener('submit', addItem);
 itemList.addEventListener('click', deleteItem);
-listClear.addEventListener('clear', clearList);
+listClear.addEventListener('click', clearList);
