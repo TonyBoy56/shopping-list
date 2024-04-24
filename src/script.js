@@ -50,7 +50,9 @@ function deleteItem(e) {
 }
 
 function clearList() {
-  console.log('works');
+  while (itemList.firstChild) {
+    itemList.removeChild(itemList.firstChild);
+  }
 ;}
 
 //  Event Listeners, to be added to an initializer function
