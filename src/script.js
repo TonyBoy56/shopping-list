@@ -4,6 +4,8 @@ const itemForm = document.getElementById('item-form');
 const itemInput = document.getElementById('item-input');
 const itemList = document.getElementById('item-list');
 const listClear = document.getElementById('clear');
+const itemFilter = document.getElementById('filter');
+const item = document.querySelectorAll('li');
 
 function addItem(e) {
   e.preventDefault();
@@ -57,7 +59,10 @@ function clearList() {
 
 // check state of appliation to remove Filter and Clear All elements from the page when list is not present
 function checkUI() {
-
+  // if (items.length === 0 ) {
+  //   listClear.style.display = 'none';
+  //   itemFilter.style.display = 'none';
+  // }
 }
 
 //  Event Listeners, to be added to an initializer function
