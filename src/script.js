@@ -53,7 +53,8 @@ function clearList() {
   while (itemList.firstChild) {
     itemList.removeChild(itemList.firstChild);
   }
-;}
+}
+
 
 //  Event Listeners, to be added to an initializer function
 itemForm.addEventListener('submit', addItem);
