@@ -55,6 +55,10 @@ function clearList() {
   }
 }
 
+// check state of appliation to remove Filter and Clear All elements from the page when list is not present
+function checkUI() {
+
+}
 
 //  Event Listeners, to be added to an initializer function
 itemForm.addEventListener('submit', addItem);
