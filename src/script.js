@@ -62,7 +62,9 @@ function checkUI() {
   if (items.length === 0 ) {
     listClear.style.display = 'none';
     itemFilter.style.display = 'none';
-    
+  } else {
+    listClear.style.display = 'block';
+    itemFilter.style.display = 'block';
   }
 }
 
