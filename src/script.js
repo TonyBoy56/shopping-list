@@ -24,11 +24,11 @@ function addItem(e) {
   const button = createButton('delete-item btn-link text-red');
   li.appendChild(button);
 
-  checkUI();
-
   // Add li to the DOM
   itemList.appendChild(li);
-
+  
+  checkUI();
+  
   itemInput.value = '';
 }
 
@@ -62,7 +62,8 @@ function clearList() {
 
 // check state of appliation to remove Filter and Clear All elements from the page when list is not present
 function checkUI() {
-  const items = document.querySelectorAll('li');
+  const items = itemList.querySelectorAll('li');
+  console.log(items)
 
   if (items.length === 0 ) {
     listClear.style.display = 'none';
