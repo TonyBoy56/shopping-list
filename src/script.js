@@ -5,7 +5,6 @@ const itemInput = document.getElementById('item-input');
 const itemList = document.getElementById('item-list');
 const listClear = document.getElementById('clear');
 const itemFilter = document.getElementById('filter');
-const items = document.querySelectorAll('li');
 
 function addItem(e) {
   e.preventDefault();
@@ -25,6 +24,9 @@ function addItem(e) {
   const button = createButton('delete-item btn-link text-red');
   li.appendChild(button);
 
+  checkUI();
+
+  // Add li to the DOM
   itemList.appendChild(li);
 
   itemInput.value = '';
@@ -47,7 +49,8 @@ function createIcon(classes) {
 
 function deleteItem(e) {
   if (e.target.parentElement.classList.contains('delete-item')) {
-    e.target.parentElement.parentElement.remove();  
+    e.target.parentElement.parentElement.remove();
+    // checkUI();
   };
 }
 
@@ -59,6 +62,8 @@ function clearList() {
 
 // check state of appliation to remove Filter and Clear All elements from the page when list is not present
 function checkUI() {
+  const items = document.querySelectorAll('li');
+
   if (items.length === 0 ) {
     listClear.style.display = 'none';
     itemFilter.style.display = 'none';
