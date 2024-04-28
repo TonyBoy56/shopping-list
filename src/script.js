@@ -50,20 +50,21 @@ function createIcon(classes) {
 function deleteItem(e) {
   if (e.target.parentElement.classList.contains('delete-item')) {
     e.target.parentElement.parentElement.remove();
-    // checkUI();
+    checkUI();
   };
 }
 
 function clearList() {
-  while (itemList.firstChild) {
-    itemList.removeChild(itemList.firstChild);
+  if (confirm('Are You Sure?')) {
+    while (itemList.firstChild) {
+      itemList.removeChild(itemList.firstChild);
+    }
   }
 }
 
 // check state of appliation to remove Filter and Clear All elements from the page when list is not present
 function checkUI() {
   const items = itemList.querySelectorAll('li');
-  console.log(items)
 
   if (items.length === 0 ) {
     listClear.style.display = 'none';
