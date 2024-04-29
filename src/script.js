@@ -47,6 +47,10 @@ function createIcon(classes) {
   return icon;
 }
 
+function filterItems() {
+  console.log('Filter works');
+}
+
 function deleteItem(e) {
   if (e.target.parentElement.classList.contains('delete-item')) {
     e.target.parentElement.parentElement.remove();
@@ -80,5 +84,7 @@ function checkUI() {
 itemForm.addEventListener('submit', addItem);
 itemList.addEventListener('click', deleteItem);
 listClear.addEventListener('click', clearList);
+listClear.addEventListener('click', filterItems);
 
 checkUI();
+filterItems();
