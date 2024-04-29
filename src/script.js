@@ -47,8 +47,19 @@ function createIcon(classes) {
   return icon;
 }
 
-function filterItems() {
-  console.log('Filter works');
+function filterItems(e) {
+  const items = itemList.querySelectorAll('li');
+  const text = e.target.value.toLowerCase();
+
+  items.forEach(item => {
+    const itemName = item.firstChild.textContent.toLowerCase();
+
+    if (itemName.indexOf(text) != -1) {
+      item.style.display = 'flex';
+    } else {
+      item.style.display = 'none';
+    }
+  });
 }
 
 function deleteItem(e) {
@@ -84,7 +95,6 @@ function checkUI() {
 itemForm.addEventListener('submit', addItem);
 itemList.addEventListener('click', deleteItem);
 listClear.addEventListener('click', clearList);
-listClear.addEventListener('click', filterItems);
+itemFilter.addEventListener('input', filterItems);
 
 checkUI();
-filterItems();
